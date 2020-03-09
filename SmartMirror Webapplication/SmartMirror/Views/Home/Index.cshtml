@@ -4,8 +4,12 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="~/CSS/StyleSheet.css" rel="stylesheet" type="text/css" />
-           <title>SmartMirror</title>
-    </head>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <title>SmartMirror</title>
+</head>
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -97,25 +101,36 @@
                 <div id="SpotifyApp" class="row">
                     <div id="SpotifyControl" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <script src="https://sdk.scdn.co/spotify-player.js"></script>
+                        <script>
+                            window.onSpotifyWebPlaybackSDKReady = () => {
+                                // You can now initialize Spotify.Player and use the SDK
+                            };
+                        </script>
                         <script src="~/JS/SpotifyScript.js"></script>
                         <div class="row">
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-1">
-                                <img id="currentSong" src="" alt="" />
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                <label id="currentSong"></label>
                             </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-1">
-                                <button id="togglePlay"></button>   
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                <label id="nextSong"></label>
                             </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-1">
-                                <button id="previousTrack"></button>
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                <label id="durationSong"></label>
                             </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-1">
-                                <button id="nextTrack"></button>
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                <button id="togglePlay"><img src="#" alt="<>" /></button>
                             </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-1">
-                                <button id="VolDown"></button>
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                <button id="previousTrack"><img src="#" alt="<>" /></button>
                             </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-1">
-                                <button id="VolUp"></button>
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                <button id="nextTrack"><img src="#" alt="<>" /></button>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                <button id="volDown"><img src="#" alt="<>" /></button>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                <button id="volUp"><img src="#" alt="<>" /></button>
                             </div>
                         </div>
 
@@ -130,18 +145,5 @@
             </div>
         </div>
     </div>
-
-
-
-    <script>
-        jQuery(window).bind(
-            "beforeunload",
-            function () {
-                player.disconnect();
-            });
-    </script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
