@@ -5,12 +5,12 @@
 p {
     color: white;
     text-align: center;
-    font-size: inherit;
+    font-size: 10px;
 }
 label {
     color: white;
     text-align: center;
-    font-size: inherit;
+    font-size: 10px;
 }
 
 #WeatherApp {

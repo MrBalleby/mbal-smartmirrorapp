@@ -7,20 +7,22 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
+    <script src="~/JS/weatherScript.js"></script>
+
+
     <title>SmartMirror</title>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                 <div id="WeatherApp">
                     <div class="row">
                         <div id="CurrentWeather" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="row">
                                 <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-                                    <div id="WeatherIcon">
-                                        <img src="#" alt="Alternate Text" />
+                                    <div>
+                                        <img id="WeatherIcon" src="#" alt="Alternate Text" />
                                     </div>
                                 </div>
                                 <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
@@ -39,39 +41,39 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="row">
                                 <div id="day1" class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                    <p id="d1I"></p>
-                                    <p id="d1N"></p>
-                                    <p id="d1T"></p>
+                                    <p><img id="d1I" src="#" alt="No Data Available" /></p>
+                                    <p id="d1N">No Data Available</p>
+                                    <p id="d1T">No Data Available</p>
                                 </div>
                                 <div id="day2" class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                    <p id="d2I"><img src="#" alt="No Data Available" /></p>
+                                    <p><img id="d2I" src="#" alt="No Data Available" /></p>
                                     <p id="d2N">No Data Available</p>
                                     <p id="d2T">No Data Available</p>
                                 </div>
                                 <div id="day3" class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                    <p id="d3I"><img src="#" alt="No Data Available" /></p>
+                                    <p><img id="d3I" src="#" alt="No Data Available" /></p>
                                     <p id="d3N">No Data Available</p>
                                     <p id="d3T">No Data Available</p>
                                 </div>
                                 <div id="day4" class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                    <p id="d4I"><img src="#" alt="No Data Available" /></p>
+                                    <p><img id="d4I" src="#" alt="No Data Available" /></p>
                                     <p id="d4N">No Data Available</p>
                                     <p id="d4T">No Data Available</p>
                                 </div>
                                 <div id="day5" class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                    <p id="d5I"><img src="#" alt="No Data Available" /></p>
+                                    <p><img id="d5I" src="#" alt="No Data Available" /></p>
                                     <p id="d5N">No Data Available</p>
                                     <p id="d5T">No Data Available</p>
                                 </div>
                                 <div id="day6" class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                    <p id="d6I"><img src="#" alt="No Data Available" /></p>
+                                    <p><img id="d6I" src="#" alt="No Data Available" /></p>
                                     <p id="d6N">No Data Available</p>
                                     <p id="d6T">No Data Available</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                    
                     <div id="Location" class="row">
                         <div id="City" class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
                             <div>
@@ -138,7 +140,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                 <div id="NewsApp">
                     <p>test</p>
                 </div>
