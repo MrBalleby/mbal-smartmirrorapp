@@ -25,6 +25,10 @@ label {
     background-color: rgba(128, 128, 128,.1)
 }
 
+#WeatherInfo {
+    text-align: left;
+}
+
 #LongTermForecast {
     margin-bottom: 20px;
     padding: 2px,2px,2px,2px;
@@ -63,4 +67,16 @@ label {
     margin-bottom: 20px;
     padding: 2px,2px,2px,2px;
     background-color: rgba(128, 128, 128,.1)
+}
+
+#SearchTerm {
+    width:95%;
+}
+
+#NewsBtn {
+}
+
+#NewsText {
+    margin-top: 2%;
+    font-size: medium;
 }

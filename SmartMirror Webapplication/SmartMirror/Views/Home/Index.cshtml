@@ -8,17 +8,17 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="~/JS/weatherScript.js"></script>
-
+    <script src="~/JS/NewsScript.js"></script>
 
     <title>SmartMirror</title>
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                 <div id="WeatherApp">
                     <div class="row">
-                        <div id="CurrentWeather" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div id="CurrentWeather" class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                             <div class="row">
                                 <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
                                     <div>
@@ -36,6 +36,8 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                     </div>
                     <div id="LongTermForecast" class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -73,7 +75,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div id="Location" class="row">
                         <div id="City" class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
                             <div>
@@ -135,14 +137,27 @@
                                 <button id="volUp"><img src="#" alt="<>" /></button>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                 <div id="NewsApp">
-                    <p>test</p>
+                    <div class="row">
+                        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                            <input type="text" id="SearchTerm" name="SearchTerm"><br>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                            <button id="NewsBtn" type="button">Search</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <p id="NewsText">Your News</p>
+                            <div id="NewsFeed">
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
