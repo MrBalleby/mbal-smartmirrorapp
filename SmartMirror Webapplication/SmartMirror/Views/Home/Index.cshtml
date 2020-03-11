@@ -36,8 +36,25 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <div id="SpotifyControl" class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <div>
+                                <p id="currentSong"></p>
+
+                                <p id="nextSong"></p>
+
+                                <p id="durationSong"></p>
+
+                                <button id="togglePlay"><img src="~/icons/iconfinder_1-icon-music-01_3694729.png" height="10" width="10"/></button>
+
+                                <button id="previousTrack"><img src="~/icons/iconfinder_previous_arrow_back_left_music_4593131.png" height="10" width="10" /></button>
+
+                                <button id="nextTrack"><img src="~/icons/iconfinder_next_music_player_play_media_4593120(1).png" height="10" width="10"/></button>
+
+                                <button id="volDown"><img src="~/icons/iconfinder_music-21_4634540.png" height="10" width="10"/></button>
+
+                                <button id="volUp"><img src="~/icons/iconfinder_music-23_4634542.png" height="10" width="10"/></button>
+                            </div>
+                        </div>
                     </div>
                     <div id="LongTermForecast" class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -99,43 +116,6 @@
                         </div>
                         <div id="SearchBtn" class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
                             <button id="LocationBtn" type="button">Search</button>
-                        </div>
-                    </div>
-                </div>
-                <div id="SpotifyApp" class="row">
-                    <div id="SpotifyControl" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <script src="https://sdk.scdn.co/spotify-player.js"></script>
-                        <script>
-                            window.onSpotifyWebPlaybackSDKReady = () => {
-                                // You can now initialize Spotify.Player and use the SDK
-                            };
-                        </script>
-                        <script src="~/JS/SpotifyScript.js"></script>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                <label id="currentSong"></label>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                <label id="nextSong"></label>
-                            </div>
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                <label id="durationSong"></label>
-                            </div>
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                <button id="togglePlay"><img src="#" alt="<>" /></button>
-                            </div>
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                <button id="previousTrack"><img src="#" alt="<>" /></button>
-                            </div>
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                <button id="nextTrack"><img src="#" alt="<>" /></button>
-                            </div>
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                <button id="volDown"><img src="#" alt="<>" /></button>
-                            </div>
-                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-                                <button id="volUp"><img src="#" alt="<>" /></button>
-                            </div>
                         </div>
                     </div>
                 </div>
