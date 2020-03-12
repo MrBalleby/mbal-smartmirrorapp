@@ -1,10 +1,9 @@
 ﻿$(document).ready(function () {
     $(function () {
         $('#NewsBtn').on('click', function () {
-            console.log('in function');
             var searchterm = document.getElementById("SearchTerm").value;
             var myurl = "https://smartmirrornewssearchengine.cognitiveservices.azure.com/bing/v7.0/news/search?&q=" + searchterm +"&count=100";
-            console.log(myurl);
+            
             $.ajax({
                 type: "GET",
                 dataType: "json",
@@ -14,10 +13,10 @@
                     xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "0e8fffce9f294239bb8d0ef562942df7"); //replace value with your own key
                 },
                 success: function (data) {
-                    console.log(data);
+                    
                     $('#NewsFeed').empty();
                     for (var i = 0; i < data.value.length; i++) {
-                        console.log(data.value[i]);
+                        
                         try {
                             var nImgUrl = JSON.stringify(data.value[i].image.thumbnail.contentUrl);
                         } catch (e) {

@@ -1,17 +1,16 @@
 ﻿$(document).ready(function () {
     $(function () {
         $('#LocationBtn').on('click', function () {
-            console.log('in function');
             var cName = document.getElementById("CityName").value;
             var cCName = document.getElementById("CountryName").value;
             var myurl = "https://api.weatherbit.io/v2.0/current?city=" + cName + "," + cCName + "&key=3abb6702d74e418db1676a60d34ad74e";
-            console.log(myurl);
+            
             $.ajax({
                 type: "GET",
                 dataType: "json",
                 url: myurl,
                 success: function (data) {
-                    console.log("success");
+                    
                     //console.log(JSON.stringify(data.data[0].weather.description));
                     var wIcon = JSON.stringify(data.data[0].weather.icon);
                     var object1 = JSON.stringify(data.data[0].city_name);
@@ -23,7 +22,7 @@
                     object1 = object1.replace(/[^a-z0-9]/gi,'');
                     object3 = object3.replace(/[^a-z0-9]/gi,'');
                     object4 = object4.replace(/[^a-z0-9]/gi,'');
-                    console.log(object1);
+                    
                     $('#WeatherIcon').attr('src', "https://www.weatherbit.io/static/img/icons/" + wIcon+".png");
                     $('#City').text("City " + object1);
                     $('#WeatherTemp').text("C " + object2);
@@ -37,7 +36,7 @@
                         dataType: "json",
                         url: anotherurl,
                         success: function (bigdata) {
-                            console.log("Success 2");
+                            
                             console.log(bigdata.city_name);
                             var wIcon_0 = JSON.stringify(bigdata.data[0].weather.icon);
                             var object1_0 = JSON.stringify(bigdata.city_name);
